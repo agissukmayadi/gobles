@@ -1,0 +1,144 @@
+:root {
+    --light-color: rgb(242, 242, 242);
+    --dark-color: rgb(63, 61, 86);
+    --purple-color: rgb(108, 99, 255);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 2000px;
+}
+
+nav {
+    position: fixed;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+
+nav .logo {
+    font-weight: 900;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav .logo span {
+    color: var(--purple-color);
+}
+
+nav .link a {
+    font-size: 1rem;
+    padding: .4em .9em;
+    color: var(--dark-color);
+    text-decoration: none;
+    margin: 0 10;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+nav .link .link-item:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+nav .link .sign-up {
+    background-color: var(--purple-color);
+    color: var(--light-color);
+}
+
+nav .link .sign-up:hover {
+    box-shadow: 5px 5px #888888
+}
+
+nav .hamburger {
+    border: 1px solid var(--dark-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+header {
+    padding-top: 70px;
+    background-color: var(--purple-color);
+    width: 100%;
+}
+
+header .wrapper-header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 8vw;
+}
+
+header .wrapper-header .image-header {
+    width: 40vw;
+}
+
+header .wrapper-header .content-header {
+    font-size: 1vw;
+    color: var(--light-color);
+}
+
+@media screen and (max-width:992px) {
+    nav .link {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+    header .wrapper-header {
+        flex-direction: column;
+        row-gap: 10vh;
+    }
+
+    header .wrapper-header .image-header {
+        width: 500px;
+    }
+
+    header .wrapper-header .content-header {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    nav .hamburger {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    header {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    header .wrapper-header .image-header {
+        display: none;
+    }
+
+    header .wrapper-header .content-header {
+        font-size: 2vh;
+    }
+}
