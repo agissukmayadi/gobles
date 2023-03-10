@@ -12,9 +12,10 @@ body {
 }
 
 nav {
+    top: 0;
+    left: 0;
     position: fixed;
     box-sizing: border-box;
-    margin: 0 auto;
     width: 100%;
     padding: 15px 10%;
     display: flex;
@@ -67,28 +68,44 @@ nav .hamburger {
 }
 
 header {
-    padding-top: 70px;
+    margin-top: 75px;
     background-color: var(--purple-color);
     width: 100%;
 }
 
 header .wrapper-header {
     width: 80%;
+    box-sizing: border-box;
     margin: 0 auto;
-    padding: 10vh 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    column-gap: 8vw;
+    justify-content: space-between;
+    padding: 100px 0;
 }
 
 header .wrapper-header .image-header {
-    width: 40vw;
+    width: 50%;
 }
 
 header .wrapper-header .content-header {
-    font-size: 1vw;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 50px;
     color: var(--light-color);
+}
+
+header .wrapper-header .content-header a {
+    text-decoration: none;
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+header .wrapper-header .content-header a:hover {
+    border: none;
+    color: var(--purple-color);
+    background-color: var(--light-color);
 }
 
 @media screen and (max-width:992px) {
@@ -100,21 +117,17 @@ header .wrapper-header .content-header {
         display: block;
     }
 
-    header {
-        height: 100vh;
-    }
-
     header .wrapper-header {
-        flex-direction: column;
-        row-gap: 10vh;
+        height: calc(100vh - 75px);
     }
 
     header .wrapper-header .image-header {
-        width: 500px;
+        display: none;
     }
 
     header .wrapper-header .content-header {
-        font-size: 16px;
+        text-align: center;
+        flex-grow: 1;
     }
 
 }
@@ -128,17 +141,5 @@ header .wrapper-header .content-header {
         justify-content: center;
     }
 
-    header {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-    }
 
-    header .wrapper-header .image-header {
-        display: none;
-    }
-
-    header .wrapper-header .content-header {
-        font-size: 2vh;
-    }
 }
